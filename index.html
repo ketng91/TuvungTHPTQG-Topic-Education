@@ -389,7 +389,15 @@ const data = {
   { en: "learn by heart /lɜːrn baɪ hɑːrt/", vn: "học thuộc lòng", tick: false },
   { en: "pass with flying colors /pæs wɪð ˈflaɪɪŋ ˈkʌlərz/", vn: "đậu kỳ thi với điểm số rất cao", tick: false },
   { en: "post-graduate /ˌpoʊst ˈɡrædʒuət/", vn: "sau đại học (người học/chương trình)", tick: false },
-  { en: "teacher’s pet /ˈtitʃərz pɛt/", vn: "học sinh cưng của giáo viên", tick: false }
+  { en: "teacher’s pet /ˈtitʃərz pɛt/", vn: "học sinh cưng của giáo viên", tick: false },
+  { en: "pursue /pərˈsuː/", vn: "theo đuổi (mục tiêu, đam mê, sự nghiệp)", tick: false },
+  { en: "motivator /ˈmoʊtɪˌveɪtər/", vn: "động lực / nhân tố thúc đẩy", tick: false },
+  { en: "broaden my horizons /ˈbrɔːdən maɪ həˈraɪzənz/", vn: "mở rộng tầm mắt / kiến thức", tick: false },
+  { en: "address (v) /əˈdrɛs/", vn: "giải quyết / xử lý (vấn đề)", tick: false },
+  { en: "augment /ɔːɡˈmɛnt/", vn: "tăng cường / gia tăng (giá trị, số lượng)", tick: false },
+  { en: "rigorous /ˈrɪɡərəs/", vn: "nghiêm ngặt / khắt khe (phương pháp, tiêu chuẩn)", tick: false },
+  { en: "ultimately /ˈʌltəmətli/", vn: "cuối cùng / xét cho cùng", tick: false },
+  { en: "merely /ˈmɪrli/", vn: "chỉ là / đơn thuần là", tick: false }
   ],
 
 };
@@ -434,7 +442,13 @@ const exercises = {
   {
     q: "Before the big test tomorrow, I need to ________ the books and start studying seriously.", 
     a: "hit"
-  }
+  },
+  {
+    q: "<b>Reading Practice:</b> In the contemporary educational landscape, the traditional focus on literacy and numeracy has been augmented by a growing emphasis on critical thinking, a skill deemed essential for navigating the complexities of the digital age. Many students, particularly those pursuing tertiary education, often find themselves having to burn the midnight oil as they bury themselves in assignments to meet rigorous academic standards. While the pressure to pass an exam with flying colors remains a primary motivator, some individuals opt to take a gap year before university to broaden their horizons beyond the formal syllabus. However, the rise of academic competition has also brought challenges; the temptation of plagiarism and the increasing rate of dropouts are concerns that every principal must address. Ultimately, whether a student attends a state school or a private school, the true value of their qualification lies in the ability to apply knowledge practically rather than merely learning by heart.", 
+    a: "Trong bối cảnh giáo dục đương đại, sự tập trung truyền thống vào kỹ năng đọc viết và năng lực tính toán đã được gia tăng đáng kể bởi sự chú trọng ngày càng lớn vào tư duy phản biện — một kỹ năng được xem là thiết yếu để định hướng trong sự phức tạp của thời đại kỹ thuật số. Nhiều sinh viên, đặc biệt là những người đang theo đuổi giáo dục đại học, thường thấy mình phải thức khuya học bài khi họ vùi đầu vào bài tập để đáp ứng các tiêu chuẩn học thuật khắt khe. Mặc dù áp lực phải đậu kỳ thi với điểm số cao rực rỡ vẫn là động lực chính, một số cá nhân lại lựa chọn nghỉ một năm cách quãng trước khi vào đại học để mở rộng tầm nhìn vượt ra ngoài chương trình học chi tiết chính quy. Tuy nhiên, sự gia tăng của cạnh tranh học thuật cũng mang đến những thách thức; sự cám dỗ của hành vi đạo văn và tỷ lệ bỏ học ngày càng tăng là những mối quan ngại mà mọi vị hiệu trưởng đều phải giải quyết. Suy cho cùng, dù một học sinh theo học tại trường công lập hay trường tư thục, giá trị thực sự của bằng cấp nằm ở khả năng ứng dụng kiến thức vào thực tế thay vì chỉ đơn thuần là học thuộc lòng."
+  },
+
+
   ],
   2: [
     {q:"Famous athletes can boost sales through product ________.", a:"endorsement"},
@@ -535,7 +549,7 @@ function checkEx(i){
     firework(); // gọi pháo hoa
   } else {
     box.innerHTML = "✘ " + exercises[currList][i].a;
-    box.style.color = "#C5705D"; // chữ sai màu đỏ
+    box.style.color = "#D02752"; // chữ sai màu đỏ
   }
 }
 
