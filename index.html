@@ -243,6 +243,20 @@ select {
     50% {transform: translate(calc(var(--x)*.5),calc(var(--y)*.4)) scale(1.1);opacity:1;}
     100% {transform: translate(var(--x),var(--y)) scale(.5);opacity:0;}
   }
+
+.mc-options {
+  margin-left: -20;        /* đẩy sang trái */
+  padding-left: -20px;
+}
+
+.mc-options div {
+  margin-left: 0;
+}
+
+.mc-options input[type="radio"] {
+  margin-right: -70px;     /* khoảng cách tròn – chữ */
+}
+
 </style>
 </head>
 
@@ -418,14 +432,6 @@ const data = {
 const exercises = {
   1: [
   {
-    q: "Students who live and study at their school throughout the term are attending a ________school.", 
-    a: "boarding"
-  },
-  {
-    q: "After finishing her four-year university program, she received her ________degree.", 
-    a: "bachelor's"
-  },
-  {
     q: "In many countries, children aged 6 to 11 attend ________ school to learn basic subjects.", 
     a: "primary"
   },
@@ -434,28 +440,66 @@ const exercises = {
     a: "plagiarism"
   },
   {
-    q: "To pay for the expensive ________ at the private university, he had to take out a loan.", 
-    a: "tuition fees"
+    q: "To pay for the expensive ________ fees at the private university, he had to take out a loan.", 
+    a: "tuition"
   },
   {
     q: "She is a real ________; she spends every weekend in the library surrounded by books.", 
     a: "bookworm"
   },
   {
-    q: "The academic year is usually divided into two periods, each called a ________.", 
-    a: "semester"
-  },
-  {
     q: "Because she studied so hard, she managed to pass the final exam with ________colors.", 
     a: "flying"
   },
   {
-    q: "Before starting university, many students take a ________ to travel and gain work experience.", 
-    a: "gap year"},
-  {
     q: "Before the big test tomorrow, I need to ________ the books and start studying seriously.", 
     a: "hit"
   },
+{
+  q: "Taking a/an _________ year can allow students to do voluntary work or internships, and travel.",
+  options: ["blank", "empty", "gap", "free"],
+  correct: "C"
+},
+{
+  q: "She has not been offered the job because she cannot meet the _________ of the job.",
+  options: ["requirements", "applicants", "information", "education"],
+  correct: "A"
+},
+{
+  q: "Students who need practical skills and want to prepare for a good job should take a _________ course.",
+  options: ["vocation", "vocational", "education", "educational"],
+  correct: "B"
+},
+{
+  q: "Higher education will _________ us with more knowledge, skills and critical thinking skills.",
+  options: ["provide", "give", "make", "pass"],
+  correct: "A"
+},
+{
+  q: "I want to _________ postgraduate education to get master’s and doctoral degrees.",
+  options: ["pursue", "find", "take", "decide"],
+  correct: "A"
+},
+{
+  q: "My younger brother graduated _________ college last month and has been looking for a job.",
+  options: ["with", "from", "on", "of"],
+  correct: "B"
+},
+{
+  q: "Have you applied for the _________ to study in China?",
+  options: ["qualifications", "documents", "scholarship", "salary"],
+  correct: "C"
+},
+{
+  q: "Although Tim did not have any academic qualifications, he had a lot of practical _________.",
+  options: ["degree", "use", "experience", "advice"],
+  correct: "C"
+},
+{
+  q: "University will give you the opportunity to _________ your potential by giving you more tools for success.",
+  options: ["limit", "expand", "decrease", "give up"],
+  correct: "B"
+},
   {
     q: "<b>Reading Practice:</b> In the contemporary educational landscape, the traditional focus on literacy and numeracy has been augmented by a growing emphasis on critical thinking, a skill deemed essential for navigating the complexities of the digital age. Many students, particularly those pursuing tertiary education, often find themselves having to burn the midnight oil as they bury themselves in assignments to meet rigorous academic standards. While the pressure to pass an exam with flying colors remains a primary motivator, some individuals opt to take a gap year before university to broaden their horizons beyond the formal syllabus. However, the rise of academic competition has also brought challenges; the temptation of plagiarism and the increasing rate of dropouts are concerns that every principal must address. Ultimately, whether a student attends a state school or a private school, the true value of their qualification lies in the ability to apply knowledge practically rather than merely learning by heart.", 
     a: "Bản dịch: Trong bối cảnh giáo dục đương đại, sự tập trung truyền thống vào kỹ năng đọc viết và năng lực tính toán đã được gia tăng đáng kể bởi sự chú trọng ngày càng lớn vào tư duy phản biện — một kỹ năng được xem là thiết yếu để định hướng trong sự phức tạp của thời đại kỹ thuật số. Nhiều sinh viên, đặc biệt là những người đang theo đuổi giáo dục đại học, thường thấy mình phải thức khuya học bài khi họ vùi đầu vào bài tập để đáp ứng các tiêu chuẩn học thuật khắt khe. Mặc dù áp lực phải đậu kỳ thi với điểm số cao rực rỡ vẫn là động lực chính, một số cá nhân lại lựa chọn nghỉ một năm cách quãng trước khi vào đại học để mở rộng tầm nhìn vượt ra ngoài chương trình học chi tiết chính quy. Tuy nhiên, sự gia tăng của cạnh tranh học thuật cũng mang đến những thách thức; sự cám dỗ của hành vi đạo văn và tỷ lệ bỏ học ngày càng tăng là những mối quan ngại mà mọi vị hiệu trưởng đều phải giải quyết. Suy cho cùng, dù một học sinh theo học tại trường công lập hay trường tư thục, giá trị thực sự của bằng cấp nằm ở khả năng ứng dụng kiến thức vào thực tế thay vì chỉ đơn thuần là học thuộc lòng."
@@ -463,15 +507,6 @@ const exercises = {
 
 
   ],
-  2: [
-    {q:"Famous athletes can boost sales through product ________.", a:"endorsement"},
-{q:"Companies must protect their ________ by maintaining consistent quality.", a:"brand equity"},
-{q:"A singer with strong ________ can attract millions of new customers.", a:"celebrity appeal"},
-{q:"Brands aim to build long-term ________ among returning customers.", a:"brand loyalty"},
-{q:"A poorly handled ________ may damage both the celebrity and the brand.", a:"celebrity scandal"},
-  ],
-
-
 
 
 
@@ -553,31 +588,82 @@ function dontKnow(){
 
 /********** EXERCISES **********/
 function loadExercises(){
-  const box=document.getElementById("exercise");
-  box.innerHTML="";
-  exercises[currList].forEach((item,i)=>{
-    box.innerHTML+=`
-    <div style="margin:10px 0;">
-      ${i+1}. ${item.q}
-      <input id="ex${i}">
-      <button onclick="checkEx(${i})">Check</button>
-      <span id="res${i}" class="result"></span>
-    </div>`;
+  const box = document.getElementById("exercise");
+  box.innerHTML = "";
+
+  exercises[currList].forEach((item, i) => {
+
+    // ===== TRẮC NGHIỆM =====
+    if(item.options){
+      box.innerHTML += `
+        <div style="margin:15px 0;">
+          ${i+1}. ${item.q}
+          <div class="mc-options">
+            ${item.options.map((opt, idx) => `
+              <div>
+                <label>
+                  <input type="radio" name="ex${i}" value="${String.fromCharCode(65+idx)}">
+                  ${String.fromCharCode(65+idx)}. ${opt}
+                </label>
+              </div>
+            `).join("")}
+          </div>
+          <button onclick="checkEx(${i})">Check</button>
+          <span id="res${i}" class="result"></span>
+        </div>
+      `;
+    }
+
+    // ===== ĐIỀN TỪ =====
+    else {
+      box.innerHTML += `
+        <div style="margin:15px 0;">
+          ${i+1}. ${item.q}
+          <input id="ex${i}">
+          <button onclick="checkEx(${i})">Check</button>
+          <span id="res${i}" class="result"></span>
+        </div>
+      `;
+    }
   });
 }
 
 function checkEx(i){
-  const user = document.getElementById("ex"+i).value.trim().toLowerCase();
-  const ans = exercises[currList][i].a.toLowerCase();
+  const item = exercises[currList][i];
   const box = document.getElementById("res"+i);
 
-  if(user === ans) {
-    box.innerHTML = "✔ Correct";
-    box.style.color = "#28a745"; // chữ Correct màu xanh lá
-    firework(); // gọi pháo hoa
-  } else {
-    box.innerHTML = "✘ " + exercises[currList][i].a;
-    box.style.color = "#D02752"; // chữ sai màu đỏ
+  // ===== TRẮC NGHIỆM =====
+  if(item.options){
+    const chosen = document.querySelector(`input[name="ex${i}"]:checked`);
+    if(!chosen){
+      box.innerHTML = "⚠ Chọn 1 đáp án";
+      box.style.color = "#c77d00";
+      return;
+    }
+
+    if(chosen.value === item.correct){
+      box.innerHTML = "✔ Correct";
+      box.style.color = "#28a745";
+      firework();
+    } else {
+      box.innerHTML = `✘ Đáp án đúng: ${item.correct}`;
+      box.style.color = "#D02752";
+    }
+  }
+
+  // ===== ĐIỀN TỪ =====
+  else {
+    const user = document.getElementById("ex"+i).value.trim().toLowerCase();
+    const ans = item.a.toLowerCase();
+
+    if(user === ans){
+      box.innerHTML = "✔ Correct";
+      box.style.color = "#28a745";
+      firework();
+    } else {
+      box.innerHTML = "✘ " + item.a;
+      box.style.color = "#D02752";
+    }
   }
 }
 
